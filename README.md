@@ -1,132 +1,102 @@
-# 🚀 Task Manager App 
+🚀 Task Management System
 
-A full-stack Task Management application built using React, Node.js, Express, and MongoDB.  
-It supports authentication, team management, and task assignment features.
+A modern full-stack application designed to manage tasks efficiently. Built using a combination of React on the frontend and Node.js with Express on the backend, along with MongoDB for data storage. The app enables users to collaborate, assign tasks, and track progress seamlessly.
 
----
-
-## ✨ Features
-
-- 🔐 User Authentication (Login / Register)
-- 👥 Team Management (Add / View Members)
-- 📝 Create, Update, Delete Tasks
-- 📅 Task Due Dates & Status Tracking
-- 👤 Role-based Access (Admin / Member)
-- ⚡ Clean and responsive UI
-- 🔔 Toast notifications for actions
-- 📱 Fully responsive (Mobile + Desktop)
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-- React (Vite)
-- Tailwind CSS
-- Axios
-- React Router DOM
-- React Hot Toast
-- Lucide React
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB + Mongoose
-- JWT Authentication
-- bcrypt.js
-
----
-
-## 📁 Project Structure
-```
-project-root/  
-├── client/ (Frontend)  
-│   ├── src/  
-│   ├── components/  
-│   ├── pages/  
-│   ├── hooks/  
-│   └── App.jsx  
-│  
-├── server/ (Backend)  
-│   ├── models/  
-│   ├── routes/  
-│   ├── controllers/  
-│   ├── middleware/  
-│   └── server.js  
-```
----
-
-## 🚀 Installation & Setup
-
-### 1️⃣ Clone the repository
-```bash
+✨ Key Highlights
+🔐 Secure user authentication (signup & login)
+👥 Manage teams and members easily
+📝 Perform full task operations (create, edit, delete)
+📅 Set deadlines and monitor task progress
+👤 Access control based on user roles (Admin / User)
+⚡ Smooth and user-friendly interface
+🔔 Instant notifications for user actions
+📱 Optimized for both mobile and desktop screens
+🛠️ Technologies Used
+Frontend
+React (powered by Vite)
+Tailwind CSS for styling
+Axios for API communication
+React Router for navigation
+React Hot Toast for alerts
+Lucide Icons
+Backend
+Node.js runtime
+Express framework
+MongoDB with Mongoose ODM
+JWT for authentication
+bcrypt for password encryption
+📁 Folder Layout
+root-directory/
+├── client/        # Frontend source
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── custom-hooks/
+│   └── App.jsx
+│
+├── server/        # Backend source
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   ├── middleware/
+│   └── index.js
+🚀 Getting Started
+1️⃣ Clone the repository
 git clone https://github.com/your-username/task-manager.git
 cd task-manager
-```
-### 2️⃣ Install dependencies
-- Frontend
-- cd client
-- npm install
-- Backend
-- cd server
-- npm install
----
-### 3️⃣ Setup environment variables
-- Backend .env
-- PORT=5000
-- MONGO_URI=your_mongodb_connection_string
-- JWT_SECRET=your_secret_key
-- Frontend .env
-- VITE_API_URL=http://localhost:5000/api
----
-### 4️⃣ Run the project
-- Start backend
-- cd server
-- npm run dev
-- Start frontend
-- cd client
-- npm run dev
----
-## 🔐 Authentication Flow
-- User logs in / registers
-- Server returns JWT token
-- Token stored in localStorage
-- Axios sends token in headers
-- Authorization: Bearer token
----
-## 📡 API Endpoints
-### 🔐 Auth
-| Method | Endpoint             |
-| ------ | -------------------- |
-| POST   | `/api/auth/register` |
-| POST   | `/api/auth/login`    |
+2️⃣ Install dependencies
 
-### 📝 Tasks
-| Method | Endpoint         |
-| ------ | ---------------- |
-| GET    | `/api/tasks`     |
-| POST   | `/api/tasks`     |
-| PUT    | `/api/tasks/:id` |
-| DELETE | `/api/tasks/:id` |
+Frontend setup
 
-### 📁 Projects
-| Method | Endpoint        |
-| ------ | --------------- |
-| GET    | `/api/projects` |
-| POST   | `/api/projects` |
+cd client
+npm install
 
----
-## 🎯 Future Improvements
-- Real-time updates (Socket.io)
-- Drag & drop task board
-- Email invitations
-- File uploads in tasks
-- Analytics dashboard
----
-### 👨‍💻 Author
+Backend setup
 
-- Built with ❤️ by Developer
+cd server
+npm install
+3️⃣ Environment Configuration
 
-## 📜 License
+Create .env files for both client and server.
 
-- This project is open source and free to use.
+Server (.env)
+
+PORT=5000
+MONGO_URI=your_database_url
+JWT_SECRET=your_secret_key
+
+Client (.env)
+
+VITE_API_URL=http://localhost:5000/api
+4️⃣ Run the Application
+
+Start backend
+
+cd server
+npm run dev
+
+Start frontend
+
+cd client
+npm run dev
+🔐 Authentication Overview
+Users can register or log in
+A JWT token is generated upon authentication
+The token is stored on the client side
+Each request includes the token in headers for verification
+Protected routes are accessible only to authorized users
+📡 API Overview
+Authentication Routes
+Method	Endpoint
+POST	/api/auth/register
+POST	/api/auth/login
+Task Routes
+Method	Endpoint
+GET	/api/tasks
+POST	/api/tasks
+PUT	/api/tasks/:taskId
+DELETE	/api/tasks/:taskId
+Project Routes
+Method	Endpoint
+GET	/api/projects
+POST	/api/projects
